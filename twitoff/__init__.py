@@ -9,7 +9,8 @@ load_dotenv()
 app = Flask(__name__)
 
 # basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URL")
+# app.config['SQLALCHEMY_DATABASE_URI'] = getenv("DATABASE_URL")
+app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
 # 'sqlite:///' + os.path.join(basedir, 'twitoff.db')
 app.config['SQL_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'mysecretkey')
