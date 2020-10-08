@@ -1,0 +1,14 @@
+{% extends 'base.html' %} {% block content %}
+<div class="jumbotron">
+  <h1>Add a User</h1>
+  <p>Add a new user with the form below.</p>
+  <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.username.label }}{{ form.username() }}
+            <br>
+            {{ form.followers.label }}{{ form.followers() }}
+            <br>
+            {{ form.submit() }}
+        </form>
+</div>
+{% endblock %}

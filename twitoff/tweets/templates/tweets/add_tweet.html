@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+<div class="jumbotron">
+  <h1>Add a Tweet</h1>
+  <p>Add a new tweet with the form below.</p>
+  <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.text.label }}{{ form.text() }}
+            <br>
+            {{ form.submit() }}
+        </form>
+</div>
+{% endblock %}
