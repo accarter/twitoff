@@ -10,6 +10,7 @@ from twitoff.twitter import update_all_users
 def index():
     return render_template("base.html", title="Home", users=User.query.all())
 
+
 @app.route("/compare", methods=["POST"])    
 def compare(message=""):
     user1 = request.values['user1']
